@@ -4,16 +4,22 @@ aceptar = function () {
 
     if (validacion == "2021-05-04") {
        
-        window.location.href = "index.html"
+        window.location.href = "./sorpresa/index.html"
     }
     else if ( validacion == "") {
-        alert("No has seleccionado nada amor")
+        Swal.fire({
+            icon: "error",
+            title: "Tienes que ingresar nuestra Fecha especial",
+            text: "",
+            footer: "Piensalo bien amor"
+          });
+        
     }
     else {
         Swal.fire({
             icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
+            title: "Que paso amor? Esa no es nuestra fecha",
+            text: "",
             footer: "Piensalo bien amor"
           });
         mostrarTextoEnCaja("txtFecha", "")
